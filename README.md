@@ -27,10 +27,11 @@ Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Getting Started / Guides
 
-- [disler/claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery) — the most complete hands-on reference for every hook event, with working examples for each.
-- [FlorianBruniaux/claude-code-ultimate-guide](https://github.com/FlorianBruniaux/claude-code-ultimate-guide) — 430K+ line guide covering hooks alongside skills, agents, and MCP.
 - [ChrisWiles/claude-code-showcase](https://github.com/ChrisWiles/claude-code-showcase) — full project config example wiring hooks, skills, agents, and commands together.
 - [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) — skill auto-activation + hooks + agents infrastructure example.
+- [disler/claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery) — the most complete hands-on reference for every hook event, with working examples for each.
+- [FlorianBruniaux/claude-code-ultimate-guide](https://github.com/FlorianBruniaux/claude-code-ultimate-guide) — 430K+ line guide covering hooks alongside skills, agents, and MCP.
+- [wesammustafa/Claude-Code-Everything-You-Need-to-Know](https://github.com/wesammustafa/Claude-Code-Everything-You-Need-to-Know) — a practical guide that covers hooks alongside skills, agents, and MCP servers with copy-paste examples.
 
 ## Security & Guardrail Hooks
 
@@ -38,17 +39,18 @@ Hooks that block destructive commands, exfiltration attempts, or unsafe file acc
 
 - [DataFog/datafog-python](https://github.com/DataFog/datafog-python) — `datafog-hook` gates tool calls (shell commands, web requests, file writes, MCP tools) and blocks PII from leaving the machine, entirely offline in ~70-90ms.
 - [dwarvesf/claude-guardrails](https://github.com/dwarvesf/claude-guardrails) — hardened Claude Code security config with permission deny rules, shell hooks, and prompt-injection defense in full and lite variants.
-- [yurukusa/cc-safe-setup](https://github.com/yurukusa/cc-safe-setup) — interactive installer for `PreToolUse`/`PostToolUse`/`SessionStart`/`Stop`/`SubagentStop` hooks that block destructive commands (`rm -rf`, force-push, `git reset --hard`, secret writes) at the tool boundary, with plugin variants for git protection, credential guarding, and token budgets.
 - [hanlulong/overleaf-sync-now](https://github.com/hanlulong/overleaf-sync-now) — `PreToolUse` hook that pulls fresh Overleaf web edits before every `.tex`/`.bib` read or write, stopping the agent from silently overwriting them with a stale local Dropbox copy.
 - [JeongJaeSoon/agent-guard](https://github.com/JeongJaeSoon/agent-guard) — `PreToolUse` guardrail that blocks an agent from reading `.env` files or writing secret-like values, using gitleaks for detection, with matching Git hook and CI backstops.
 - [kenryu42/cc-safety-net](https://github.com/kenryu42/cc-safety-net) — `PreToolUse` guardrail hook blocking destructive git/filesystem commands and secret file access; also supports Codex, Cursor, Gemini CLI, and other agent runtimes.
 - [kornysietsma/claude-code-permissions-hook](https://github.com/kornysietsma/claude-code-permissions-hook) — `PreToolUse` hook for more granular, rule-based permission controls than the built-in allow/deny lists.
 - [li-zhixin/claude-ignore](https://github.com/li-zhixin/claude-ignore) — `PreToolUse` hook that blocks Claude from reading files matching `.claudeignore` patterns, mirroring `.gitignore` semantics.
 - [liberzon/claude-hooks](https://github.com/liberzon/claude-hooks) — `PreToolUse` hook that decomposes compound bash commands and checks each sub-command individually against allow/deny permission patterns.
+- [MaxwellCalkin/sentinel-ai](https://github.com/MaxwellCalkin/sentinel-ai) — safety guardrails that use fast scanners to detect prompt injection, PII, and code vulnerabilities.
 - [Pantheon-Security/medusa](https://github.com/Pantheon-Security/medusa) — scans `.claude/` hooks, permissions, and skills for compromise before you clone/run a repo; 40,000+ attack-signature patterns.
 - [sangrokjung/claude-forge](https://github.com/sangrokjung/claude-forge) — 6-layer security hook stack bundled into a full Claude Code plugin framework.
 - [tillmeier/claude-code-guardrails](https://github.com/tillmeier/claude-code-guardrails) — guardrail hooks derived from real incidents, paired with a plan→implement→verify→crosscheck loop, backed by 35 bats tests and measured hook overhead.
 - [wangbooth/Claude-Code-Guardrails](https://github.com/wangbooth/Claude-Code-Guardrails) — protective hooks preventing accidental code loss via branch protection, automatic checkpointing, and safe commit squashing.
+- [yurukusa/cc-safe-setup](https://github.com/yurukusa/cc-safe-setup) — interactive installer for `PreToolUse`/`PostToolUse`/`SessionStart`/`Stop`/`SubagentStop` hooks that block destructive commands (`rm -rf`, force-push, `git reset --hard`, secret writes) at the tool boundary, with plugin variants for git protection, credential guarding, and token budgets.
 
 ## Notification Hooks
 
@@ -59,15 +61,15 @@ Send a ping to Slack, Telegram, desktop notification center, etc. when Claude ne
 
 ## Observability & Logging Hooks
 
-- [disler/claude-code-hooks-multi-agent-observability](https://github.com/disler/claude-code-hooks-multi-agent-observability) — real-time dashboard for monitoring multiple Claude Code agents via hook event tracking.
 - [coleam00/claude-memory-compiler](https://github.com/coleam00/claude-memory-compiler) — hooks capture full sessions, an LLM compiler distills them into a structured, cross-referenced project knowledge base.
+- [disler/claude-code-hooks-multi-agent-observability](https://github.com/disler/claude-code-hooks-multi-agent-observability) — real-time dashboard for monitoring multiple Claude Code agents via hook event tracking.
 - [hansipie/ecotokens](https://github.com/hansipie/ecotokens) — `PreToolUse`/`PostToolUse` hooks filter and compress shell output, file reads, and grep results before they hit the model, with a TUI dashboard tracking token savings per project.
 
 ## Git & Commit Hooks
 
+- [blader/taskmaster](https://github.com/blader/taskmaster) — `Stop` hook that keeps the agent working until all plan items and user requests are fully complete, rather than stopping early.
 - [malaysherasia-ai/claude-never-again](https://github.com/malaysherasia-ai/claude-never-again) — turns each bug you fix into a `PreToolUse` hook on `git commit` that blocks the mistake (warn first, then deny after five correct fires), also run from git’s own pre-commit; the rest become one capped line in LESSONS.md.
 - [parcadei/Continuous-Claude-v3](https://github.com/parcadei/Continuous-Claude-v3) — hooks maintain ledgers/handoffs for context continuity across sessions and commits.
-- [blader/taskmaster](https://github.com/blader/taskmaster) — `Stop` hook that keeps the agent working until all plan items and user requests are fully complete, rather than stopping early.
 
 ## Formatting / Linting / Testing Gates
 
@@ -76,31 +78,33 @@ Send a ping to Slack, Telegram, desktop notification center, etc. when Claude ne
 
 ## Voice / TTS Hooks
 
-- [shanraisshan/claude-code-hooks](https://github.com/shanraisshan/claude-code-hooks) — per-event voice announcements.
 - [disler/claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery) — TTS-on-completion example.
+- [shanraisshan/claude-code-hooks](https://github.com/shanraisshan/claude-code-hooks) — per-event voice announcements.
 
 ## Session Memory & Context Hooks
 
 - [coleam00/claude-memory-compiler](https://github.com/coleam00/claude-memory-compiler) — auto-captures sessions and compiles a persistent, evolving knowledge base.
 - [entireio/cli](https://github.com/entireio/cli) — installs `PreToolUse`/`PostToolUse` hooks that capture full agent sessions (prompts, files touched, tool calls) into a separate git branch, indexed and searchable alongside your commit history.
+- [mksglu/context-mode](https://github.com/mksglu/context-mode) — hooks that compress tool output to save context window space and persist session memory.
 - [parcadei/Continuous-Claude-v3](https://github.com/parcadei/Continuous-Claude-v3) — ledger/handoff hooks for context management across long sessions.
 - [SethGammon/Citadel](https://github.com/SethGammon/Citadel) — persistent project memory, intent routing, safety hooks, and cost telemetry as one operating layer.
 
 ## Frameworks & Toolkits (bundle many hooks)
 
-- [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) — 20+ hooks bundled with agents, skills, commands, and rules.
-- [davepoon/buildwithclaude](https://github.com/davepoon/buildwithclaude) — hub for finding hooks alongside skills, agents, commands, and marketplace plugins.
 - [composio-community/awesome-claude-plugins](https://github.com/composio-community/awesome-claude-plugins) — curated Claude Code plugins that bundle hooks with commands/agents/MCP servers.
+- [davepoon/buildwithclaude](https://github.com/davepoon/buildwithclaude) — hub for finding hooks alongside skills, agents, commands, and marketplace plugins.
 - [fcakyon/claude-codex-settings](https://github.com/fcakyon/claude-codex-settings) — battle-tested hook configs across Claude Code, Codex, and Cursor.
 - [kyu1204/oh-my-harness](https://github.com/kyu1204/oh-my-harness) — generates a catalog of enforcement hooks (TDD guard, branch guard, command guard, commit-test gate, auto-lint, auto-PR) from a plain-English project description, with `omh sync --check` as a CI drift gate.
+- [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) — 20+ hooks bundled with agents, skills, commands, and rules.
 - [vibeeval/vibecosystem](https://github.com/vibeeval/vibecosystem) — 73 hooks as part of a larger self-learning multi-agent swarm setup.
 
 ## Multi-Agent / Cross-Tool Hooks
 
 Hooks designed to work across Claude Code, Codex, Cursor, Gemini CLI, and other agent runtimes.
 
-- [kenryu42/cc-safety-net](https://github.com/kenryu42/cc-safety-net) — cross-runtime guardrail hook (Claude Code, Codex, Cursor, Gemini CLI, Hermes Agent, and more).
 - [first-fluke/oh-my-agent](https://github.com/first-fluke/oh-my-agent) — stop-hook gates and independent judges verifying agent work by artifacts, across multiple agent runtimes.
+- [JakeSelby/model-citizen](https://github.com/JakeSelby/model-citizen) — a control plane that projects your hooks, guardrails, and telemetry rules into Claude Code and Codex.
+- [kenryu42/cc-safety-net](https://github.com/kenryu42/cc-safety-net) — cross-runtime guardrail hook (Claude Code, Codex, Cursor, Gemini CLI, Hermes Agent, and more).
 
 ## Contributing
 
