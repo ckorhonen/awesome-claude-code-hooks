@@ -50,6 +50,7 @@ Hooks that block destructive commands, exfiltration attempts, or unsafe file acc
 - [sangrokjung/claude-forge](https://github.com/sangrokjung/claude-forge) — 6-layer security hook stack bundled into a full Claude Code plugin framework.
 - [tillmeier/claude-code-guardrails](https://github.com/tillmeier/claude-code-guardrails) — guardrail hooks derived from real incidents, paired with a plan→implement→verify→crosscheck loop, backed by 35 bats tests and measured hook overhead.
 - [wangbooth/Claude-Code-Guardrails](https://github.com/wangbooth/Claude-Code-Guardrails) — protective hooks preventing accidental code loss via branch protection, automatic checkpointing, and safe commit squashing.
+- [randommonicle/claude-skills](https://github.com/randommonicle/claude-skills) — a four-layer architecture of guardrail hooks and norms distilled from real shipped defects across four production codebases.
 - [yurukusa/cc-safe-setup](https://github.com/yurukusa/cc-safe-setup) — interactive installer for `PreToolUse`/`PostToolUse`/`SessionStart`/`Stop`/`SubagentStop` hooks that block destructive commands (`rm -rf`, force-push, `git reset --hard`, secret writes) at the tool boundary, with plugin variants for git protection, credential guarding, and token budgets.
 
 ## Notification Hooks
@@ -97,6 +98,7 @@ Send a ping to Slack, Telegram, desktop notification center, etc. when Claude ne
 - [kyu1204/oh-my-harness](https://github.com/kyu1204/oh-my-harness) — generates a catalog of enforcement hooks (TDD guard, branch guard, command guard, commit-test gate, auto-lint, auto-PR) from a plain-English project description, with `omh sync --check` as a CI drift gate.
 - [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) — 20+ hooks bundled with agents, skills, commands, and rules.
 - [vibeeval/vibecosystem](https://github.com/vibeeval/vibecosystem) — 73 hooks as part of a larger self-learning multi-agent swarm setup.
+- [yotamleo/Himmel](https://github.com/yotamleo/Himmel) — an orchestrated harness for running Claude Code that includes guardrail hooks, a Jira CLI, and a cross-session handover system.
 
 ## Multi-Agent / Cross-Tool Hooks
 
