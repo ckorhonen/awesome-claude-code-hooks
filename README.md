@@ -88,6 +88,7 @@ Send a ping to Slack, Telegram, desktop notification center, etc. when Claude ne
 - [mksglu/context-mode](https://github.com/mksglu/context-mode) — hooks that compress tool output to save context window space and persist session memory.
 - [parcadei/Continuous-Claude-v3](https://github.com/parcadei/Continuous-Claude-v3) — ledger/handoff hooks for context management across long sessions.
 - [SethGammon/Citadel](https://github.com/SethGammon/Citadel) — persistent project memory, intent routing, safety hooks, and cost telemetry as one operating layer.
+- [shimo4228/harness-scope](https://github.com/shimo4228/harness-scope) — a mod whose `prompt.context`, `prompt.attachment`, `agent.offer` and `tool.call` hooks hide global skills, agents, rules files and tools per repo through named profiles, so each repo's context carries only what it uses.
 
 ## Frameworks & Toolkits (bundle many hooks)
 
